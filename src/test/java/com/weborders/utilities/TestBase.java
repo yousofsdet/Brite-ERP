@@ -15,7 +15,6 @@ import java.util.concurrent.TimeUnit;
 public abstract class TestBase {
     protected WebDriver driver;
     protected Pages pages;
-
     protected static ExtentReports report;
     protected static ExtentHtmlReporter htmlReporter;
     protected static ExtentTest extentLogger;
@@ -29,6 +28,8 @@ public abstract class TestBase {
     }
 
     @AfterMethod
+
+    // when a test fail it detects it and attach a screenshot to the report
     public void tearDownMethod(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             String screenshotLocation = BrowserUtils.getScreenshot(result.getName());
@@ -44,8 +45,13 @@ public abstract class TestBase {
 
     @BeforeTest
     public void setUpTest() {
+
+        // reporting tool initialized
         report = new ExtentReports();
+
+        //custom location and name for the report generated
         String filePath = System.getProperty("user.dir") + "/test-output/report.html";
+
         htmlReporter = new ExtentHtmlReporter(filePath);
 
         report.attachReporter(htmlReporter);

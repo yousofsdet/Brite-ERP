@@ -3,7 +3,12 @@
 
     <test name="WebOrders Automated Tests">
         <packages>
-            <package name=".*"></package>
+            <!--runs all-->
+            <!--<package name=".*"></package>-->
+
+            <!--runs one test-->
+            <package name="com.weborders.tests.functional_tests.order"></package>
+
         </packages>
     </test>
 
