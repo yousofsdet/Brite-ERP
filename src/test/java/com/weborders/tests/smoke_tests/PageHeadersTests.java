@@ -16,7 +16,7 @@ public class PageHeadersTests extends TestBase {
     @Test
     public void pageHeadersTest(){
 
-        //add reporting
+        //add reporting here
         extentLogger = report.createTest("Page Headers Test");
 
         //logger to log steps
