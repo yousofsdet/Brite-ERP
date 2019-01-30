@@ -1,38 +1,43 @@
-package com.weborders.pages;
+package com.briteErp.pages;
 
-import com.weborders.utilities.ConfigurationReader;
-import com.weborders.utilities.Driver;
+import com.briteErp.utilities.ConfigurationReader;
+import com.briteErp.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
+
     public LoginPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(id = "ctl00_MainContent_username")
-    public WebElement username;
 
-    @FindBy(id = "ctl00_MainContent_password")
-    public WebElement password;
+    @FindBy (linkText = "BriteErpDemo")
+    public WebElement BriteErpLink;
+
+    @FindBy (id = "login")
+    public WebElement emailBox;
+
+    @FindBy (id = "password")
+    public WebElement passwordBox;
+
+    @FindBy (xpath = "//button[@class='btn btn-primary']")
+    public WebElement logInButton;
 
 
-    @FindBy(id = "ctl00_MainContent_login_button")
-    public WebElement loginButton;
+    public void login(String email, String password){
 
-    @FindBy(id = "ctl00_MainContent_status")
-    public WebElement errorMessage;
+        emailBox.sendKeys(email);
+        passwordBox.sendKeys(password);
+        logInButton.click();
 
-
-    public void login(String usr, String pass) {
-        username.sendKeys(usr);
-        password.sendKeys(pass);
-        loginButton.click();
     }
 
     public void open() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
     }
+
+
 }
