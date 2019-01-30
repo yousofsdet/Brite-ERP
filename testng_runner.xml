@@ -1,13 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="WebOrders" verbose="1">
+<suite name="Brite Erp" verbose="1">
 
-    <test name="WebOrders Automated Tests">
+    <test name="Brite Sales Automated Tests">
         <packages>
             <!--runs all-->
             <!--<package name=".*"></package>-->
 
             <!--runs one test-->
-            <package name="com.weborders.tests.functional_tests.order"></package>
+            <package name="com.briteErp.tests.functional_tests.sales"></package>
 
         </packages>
     </test>

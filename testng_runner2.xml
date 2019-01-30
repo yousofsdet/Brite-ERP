@@ -3,14 +3,9 @@
 
 
     <test name="WebOrders Automated Tests">
-        <classes>
-            <class name="com.weborders.tests.functional_tests.login.ErrorMessageValidationTest">
-                <methods>
-                    <exclude name="blankPassword">
-                    </exclude>
-                </methods>
-            </class>
-        </classes>
+       <packages> 
+           <package name="com.briteErp.tests.functional_tests.sales"/>
+       </packages>
     </test>
 
 </suite>
