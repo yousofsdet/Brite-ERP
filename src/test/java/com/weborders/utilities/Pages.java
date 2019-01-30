@@ -4,7 +4,7 @@ import com.weborders.pages.*;
 
 public class Pages {
     private LoginPage loginPage;
-    private ViewAllOrdersPage viewAllOrdersPage;
+    private ProductsPage productsPage;
     private ViewAllProductsPage viewAllProductsPage;
     private OrderPage orderPage;
 
@@ -15,11 +15,11 @@ public class Pages {
         return loginPage;
     }
 
-    public ViewAllOrdersPage viewAllOrders() {
-        if (viewAllOrdersPage == null) {
-            viewAllOrdersPage = new ViewAllOrdersPage();
+      public ProductsPage productsPage() {
+        if (productsPage == null) {
+            productsPage = new ProductsPage();
         }
-        return viewAllOrdersPage;
+        return productsPage;
     }
 
     public ViewAllProductsPage viewAllProducts() {
