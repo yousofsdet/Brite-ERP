@@ -1,4 +1,4 @@
-package com.weborders.utilities;
+package com.briteErp.utilities;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

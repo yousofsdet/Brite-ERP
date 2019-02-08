@@ -1,4 +1,4 @@
-package com.weborders.utilities;
+package com.briteErp.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

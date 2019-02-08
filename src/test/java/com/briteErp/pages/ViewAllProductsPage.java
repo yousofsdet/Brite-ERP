@@ -1,6 +1,6 @@
-package com.weborders.pages;
+package com.briteErp.pages;
 
-import com.weborders.utilities.Driver;
+import com.briteErp.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
